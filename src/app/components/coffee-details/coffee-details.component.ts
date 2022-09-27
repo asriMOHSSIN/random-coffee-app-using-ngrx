@@ -24,7 +24,7 @@ export class CoffeeDetailsComponent implements OnInit {
 
 
   ngOnInit(): void {
-   console.log(this._coffee?.uid);
+
   }
 
 
