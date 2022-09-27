@@ -1,0 +1,47 @@
+
+<div class="container coffees-deatils-container" >
+
+  <br>
+  <h2>Coffees Details</h2>
+  <br>
+  <button type="button" class="badge bg-success" style="border:none;" ><a style="color:white;" routerLink="/coffees">Go Back</a></button>
+  <br>
+  <ng-container  *ngIf="_coffee ">
+<br>
+      <table class="table details-table">
+        <thead class="thead-dark"></thead>
+        <tbody>
+          <tr>
+            <th scope="row">Uid</th>
+            <td>{{_coffee.uid}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Blend Name</th>
+            <td>{{_coffee.blend_name}}</td>
+          </tr>
+          <tr>
+            <th scope="row">origin</th>
+            <td>{{_coffee.origin}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Variety</th>
+            <td>{{_coffee.variety}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Notes</th>
+            <td>{{_coffee.notes}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Intensifier</th>
+            <td>{{_coffee.intensifier}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+  </ng-container>
+
+
+
+
+</div>

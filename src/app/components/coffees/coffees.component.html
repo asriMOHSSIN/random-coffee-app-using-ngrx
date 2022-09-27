@@ -1,0 +1,52 @@
+
+
+<div class="container  coffees-container">
+<br>
+  <h2 style="position: sticky;top: 0;">Coffees list</h2>
+  <ng-container  *ngIf="isLoading$ | async as loading">Please wait loading...</ng-container>
+  <!--<ng-container  *ngIf="loaded$ | async as loaded">{{loaded}}</ng-container>-->
+  <ng-container *ngIf="apiError$ | async error"> An error has occured!</ng-container>
+  <ng-container>
+
+      <table class="table table-hover"  *ngIf="coffeesList$ | async as list">
+        <thead class="thead-dark" style="position: sticky;top: 0;">
+          <tr>
+            <th scop ="col"></th>
+            <th scope="col">Blend Name</th>
+            <th scope="col">Variety</th>
+            <th scope="col">Intensifier</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody  >
+          <tr   *ngFor="let coffee of list  | paginate: { itemsPerPage: itemsperpage, currentPage: p}; index as i">
+            <td>{{i+1}}</td>
+            <td>{{coffee.blend_name}}</td>
+            <td>{{coffee.variety}}</td>
+            <td>{{coffee.intensifier}}</td>
+            <td><button class ="btn btn-outline-info ml-2" routerLink="/coffeeDetails" [state]=coffee >Details</button></td>
+
+          </tr>
+        </tbody>
+      </table>
+    </ng-container>
+    <hr style="width: 50% ;">
+    <div class="d-flex justify-content-center pagination-container" style="margin-bottom: 30px;">
+      <select class="pagesSelect" #pages (change)="onPagesSelected(pages.value)">
+        <option default>10</option>
+        <option>15</option>
+        <option>20</option>
+      </select>
+      <pagination-controls class="row" (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+

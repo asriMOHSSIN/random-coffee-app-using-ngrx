@@ -1,0 +1,16 @@
+.coffees-container{
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+  background-color: #f9f6f2;
+  height: 80%;
+  opacity: 95%;
+  overflow: auto;
+}
+.pagesSelect{
+  height: 30px;
+  background-color: #f9f6f2;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}

@@ -1,0 +1,18 @@
+
+.coffees-deatils-container{
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #f9f6f2;
+  height: 55%;
+
+  overflow: auto;
+
+opacity: 90%;
+}
+td ,th{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none;
+}
+
